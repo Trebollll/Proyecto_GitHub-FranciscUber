@@ -1,0 +1,43 @@
+<ion-app>
+  <ion-split-pane   contentId="main" >
+    <ion-menu  contentId="main" menuId="principal">
+    <ion-header>
+      <ion-toolbar>
+        <ion-title class="subtitulo">Iniciar sesión </ion-title>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content>
+
+      <ion-menu-toggle>
+
+      <ion-menu-toggle *ngIf="userCondition == false">
+        <ion-item button="true" detail="true" routerLink="/loginpasajero">
+          <ion-label class="normal">Login</ion-label>
+          <ion-icon slot="start" name="create-sharp"></ion-icon>
+        </ion-item>
+      </ion-menu-toggle>
+      
+      <ion-menu-toggle *ngIf="userCondition" >
+        <ion-item button="true" detail="true" routerLink="/perfil">
+          <ion-label class="normal">Perfil</ion-label>
+          <ion-icon slot="start" name="create-sharp"></ion-icon>
+        </ion-item>
+      </ion-menu-toggle>
+
+      <ion-menu-toggle *ngIf="userCondition">
+        <ion-item (click)="logout()" button="true" detail="true">
+          <ion-label class="normal">Cerrar sesión</ion-label>
+          <ion-icon slot="start" name="create-sharp"></ion-icon>
+        </ion-item>
+      </ion-menu-toggle>
+        
+      </ion-menu-toggle>
+
+    </ion-content>
+  </ion-menu>
+  <ion-router-outlet id="main"></ion-router-outlet>
+</ion-split-pane>
+
+
+
+</ion-app>

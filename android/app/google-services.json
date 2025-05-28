@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "221365616738",
+    "project_id": "franciscuber-517f9",
+    "storage_bucket": "franciscuber-517f9.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:221365616738:android:e4eba9d6fe39bd512b113b",
+        "android_client_info": {
+          "package_name": "cl.duoc.testingfirebase"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCZiyQwzGoyV0yEh919NTeETgbFzQ_fxyM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
