@@ -1,0 +1,69 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title class="titulo">
+      Registro
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+<h3 class="subtitulo encabezado">Creación de Usuario</h3>
+
+<ion-item>
+  <ion-label class="normal" position="floating">
+    Nombre:
+  </ion-label>
+  <ion-input [(ngModel)]="datos.nombre" class="normal" type="text" inputmode="text">
+  </ion-input>
+</ion-item> 
+
+<ion-item>
+  <ion-label class="normal" position="floating">
+    Email:
+  </ion-label>
+  <ion-input [(ngModel)]="datos.correo" class="normal" type="text" inputmode="text">
+  </ion-input>
+</ion-item> 
+
+<ion-item>
+  <ion-label class="normal" position="floating">
+    Edad:
+  </ion-label>
+  <ion-input [(ngModel)]="datos.edad" class="normal" type="text" inputmode="text">
+  </ion-input>
+</ion-item> 
+
+<ion-item>
+    <ion-select [(ngModel)]="datos.perfil" class="normal" type="text" label="Perfil">
+      <ion-select-option value="conductor">Conductor</ion-select-option>
+      <ion-select-option value="pasajero">Pasajero</ion-select-option>
+    </ion-select>
+  </ion-item>
+
+<ion-item>
+  <ion-label class="normal" position="floating">
+    Ingrese Contraseña:
+  </ion-label>
+  <ion-input [(ngModel)]="datos.password" class="normal" type="password" inputmode="text">
+  </ion-input>
+</ion-item> 
+
+<ion-item>
+  <ion-label class="normal" position="floating">
+    Confirme Contraseña:
+  </ion-label>
+  <ion-input [(ngModel)]="datos.password2" class="normal" type="password" inputmode="text">
+  </ion-input>
+</ion-item> 
+
+<div style="text-align: end; margin: 10px;">
+  <ion-button (click)="registro333(datos.correo,datos.password)" class="normal" color="dark"> Registrarse </ion-button>
+</div>
+<div style="text-align: end; margin: 10px;">
+  <ion-button [routerLink]="['/home']" class="normal" color="dark"> Atrás </ion-button>
+</div>
+  
+</ion-content>
