@@ -11,4 +11,4 @@ Después de haber instalado estas dependencias, para poder probar el código se 
 
 ionic start
 
-Esto segundo comando funciona para poder levantar la página de manera local.
+Este segundo comando funciona para poder levantar la página de manera local.
