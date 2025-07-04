@@ -1,0 +1,40 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>Reporte por Fechas</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <form [formGroup]="rangeForm" (ngSubmit)="loadReport()">
+    <ion-item>
+      <ion-label position="stacked">Desde</ion-label>
+      <ion-datetime formControlName="from" presentation="date"></ion-datetime>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="stacked">Hasta</ion-label>
+      <ion-datetime formControlName="to" presentation="date"></ion-datetime>
+    </ion-item>
+
+    <ion-button expand="block" type="submit" [disabled]="rangeForm.invalid">
+      Generar Reporte
+    </ion-button>
+  </form>
+
+  <ion-list *ngIf="reportData.length">
+    <ion-item *ngFor="let row of reportData">
+      <ion-label>
+        <h3>{{ row.titulo }}</h3>
+        <p>{{ row.fecha | date }}</p>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+
+  <ion-button *ngIf="reportData.length" expand="block" color="success" (click)="export('excel')">
+    Descargar Excel
+  </ion-button>
+
+  <ion-button *ngIf="reportData.length" expand="block" color="tertiary" (click)="export('pdf')">
+    Descargar PDF
+  </ion-button>
+</ion-content>
